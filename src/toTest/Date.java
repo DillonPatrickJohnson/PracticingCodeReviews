@@ -9,6 +9,7 @@ public class Date {
 	private String dayName;
 	private String zodiacSign;
 
+	//Jomar Review: Maybe refactor the date to have each field as a method for test use.
 	public Date(int dd,int mm,int yyyy){
 		this.mm=mm;
 		this.dd=dd;
@@ -144,6 +145,9 @@ public class Date {
 	}
 
 	// Returns true if the combination of the parameters is valid 
+	
+	
+	//Jomar: This would be a great function to use for integration testing. 
 	public static boolean isValidDate(int thisDay,int thisMonth,int thisYear){
 		if (!validRangeForDay(thisDay)){
 			return false;
@@ -163,6 +167,7 @@ public class Date {
 	public static boolean isLeap(int year)
 	{
 		//TODO
+		//Jomar: Tip: if( (year%4==0) && (year%100!=0) || (year%400==0)){
 		return true;
 	}
 
